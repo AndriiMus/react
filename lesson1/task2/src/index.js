@@ -2,12 +2,15 @@ import React from 'react';
 import './styles.css';
 
 const rootElement = document.querySelector('#root');
+const renderGreeting = elem => {
+  const element = (
+    <div className="greeting">
+      <div className="greeting__title">Hello,world</div>
+      <div className="greeting__text">I'm learning React</div>
+    </div>
+  );
 
-const element = (
-  <div class="greeting">
-    <div class="greeting__title">Hello,world</div>
-    <div class="greeting__text">I'm learning React</div>
-  </div>
-);
+  ReactDOM.render(element, elem);
+};
 
-ReactDOM.render(element, rootElement);
+renderGreeting(rootElement);
